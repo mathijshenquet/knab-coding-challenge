@@ -1,0 +1,45 @@
+
+    <div id="main" class="container-sm mt-5 ">
+        <h2 class="text-center mb-5">Subscribe for Crypto Currency Updates</h2>
+        <form action="/" method="POST">
+            <div class="form-group row">
+                <label for="crypto" class="col-sm-3">Cryptocurrencies:</label>
+                <div class="col">
+                    {{#each crypto_currencies }}
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name="crypto_currencies" type="checkbox" {{#if this.default}} checked="checked" {{/if}} id="{{@key}}" value="{{@key}}">
+                            <label class="form-check-label" for="{{@key}}"><i class="fab {{this.fa_icon}}"></i> {{this.name}} ({{@key}})</label>
+                        </div>
+                    {{/each}}
+                </div>
+                <!-- Add more cryptocurrencies as needed -->
+            </div>
+            <div class="form-group row">
+                <label for="currency" class="col-sm-3">Select Currency:</label>
+                <div class="col">
+                <select class="selectpicker" name="fiat_currency" id="currency">
+                    {{#each fiat_currencies }}
+                        <option value="{{@key}}" data-content='<i class="fas {{this.fa_icon}}"></i> {{this.name}} ({{@key}})' />
+                    {{/each}}
+                </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col col-sm-3" for="email">Email address:</label>
+                <div class="col-sm">
+                <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-3"><button type="submit" class="btn btn-primary">Subscribe</button></div>
+                <div class="col">
+                    {{#if success}}
+                        <div class="alert alert-primary" role="alert">{{success}}</div>
+                    {{/if}}
+                    {{#if error}}
+                        <div class="alert alert-danger" role="alert">{{error}}</div>
+                    {{/if}}
+                </div>
+            </div>
+        </form>
+    </div>

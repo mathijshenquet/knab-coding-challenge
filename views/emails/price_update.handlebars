@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p>Hello Crypto Enthusiast,👋</p>
+    <p>Here's your crypto price update's in {{fiat.name}}</p>
+    <br>
+    {{#each quotes }}{{#with this}}
+    <b>{{@key}}:</b>
+    <p>🔹 Current Price: {{../fiat.symbol}} {{price}} 💶<br>
+    🔹 24h Trading Volume: {{../fiat.symbol}} {{volume_24h}} 🔄<br>
+    🔹 Volume Change in 24h: {{volume_change_24h}}% 📊<br>
+    🔹 Market Cap: {{../fiat.symbol}} {{market_cap}} 💰<br>
+    🔹 Market Cap Dominance: {{market_cap_dominance}}% 🌐<br>
+    <br>
+    <p>Price Change Percentages 📈📉:<br>
+    🔸 Last 1 hour: {{percent_change_1h}}%<br>
+    🔸 Last 24 hours: {{percent_change_24h}}%<br>
+    🔸 Last 7 days: {{percent_change_7d}}%</p>
+    <br>
+    {{/with}}{{/each}}
+    <p>Stay tuned for more updates 🚀</p>
+    <p>Happy Trading! 💼</p>
+
+    <p>
+        Best,<br />
+        Crypto Price Notifications
+    </p>
+    {{#if cancel_link }}
+    <p>
+        To unsubscribe from these updates, please use the following link
+        {{ cancel_link }}
+    </p>
+    {{/if}}
+</body>
+</html>
