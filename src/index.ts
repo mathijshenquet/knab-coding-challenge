@@ -40,6 +40,7 @@ const mailer: Mailer = new StreamMailer({
     from: EMAIL_SENDER,
     stream: process.stdout,
 });
+console.log("❗ Emails are being sent to stdout ❗")
 
 // Set up a CoinMarketCap Quoter as the quoter
 const quoter: Quoter = new CoinMarketCapQuoter({

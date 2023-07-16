@@ -42,6 +42,8 @@ You can run the app with the following command:
 npm run start
 ```
 
+❗NB: Emails are printed to the terminal instead of actually sent❗
+
 ### Testing
 
 Testing is done with Jest with all tests located in `/tests`. You can run these 
