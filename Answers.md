@@ -1,5 +1,5 @@
 
-## 1. 
+## Q1
 > How long did you spend on the coding assignment? What would you add to your solution if you had more time? If you didn't spend much time on the coding assignment then use this as an opportunity to explain what you would add
 
 My rough time management looks like this:
@@ -14,8 +14,10 @@ My rough time management looks like this:
 16th July 15:00 - 18:00 
 Writing the schduler, writing tests, commenting code, refactoring for clarity 
 
-17th July 22:00 - 24:00 
+17th July 22:00 - 01:00 
 Finishing the code, making a readme, answering questions.md
+
+So a total of roughly 10 hours
 
 I tried to add only features which I think would be neccissary for a MVP. These
 include email confirmation and canceling, a simple templating system and basic
